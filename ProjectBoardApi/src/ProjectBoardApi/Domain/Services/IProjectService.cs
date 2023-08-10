@@ -4,6 +4,6 @@ namespace ProjectBoardApi.Domain.Services;
 
 public interface IProjectService
 {
-    IEnumerable<Project> GetProjectList();
+    Task<IEnumerable<Project>> GetProjectList();
 }
 

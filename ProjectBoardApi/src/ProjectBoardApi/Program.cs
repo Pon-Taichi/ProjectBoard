@@ -1,5 +1,5 @@
-using ProjectBoardApi;
 using ProjectBoardApi.Domain.Services;
+using ProjectBoardApi.Handler;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAWSLambdaHosting(LambdaEventSource.RestApi);

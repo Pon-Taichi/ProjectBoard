@@ -8,12 +8,21 @@ public class ProjectService : IProjectService
     {
     }
 
-    public IEnumerable<Project> GetProjectList()
+    public async Task<IEnumerable<Project>> GetProjectList()
     {
+        await Task.Delay(100);
         return new List<Project>
         {
-            new Project("1", "LCA"),
-            new Project("2", "FBX")
+            new Project
+            {
+                Id = "1",
+                Name = "LCA"
+            },
+            new Project
+            {
+                Id = "2",
+                Name = "FBX"
+            }
         };
     }
 }
